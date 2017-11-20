@@ -3,7 +3,7 @@
  * 
  * TODO write the syntax for the Manager class to Extend the Employee class
  */
-public class Manager{
+public class Manager extends Employee {
 	//maxSize is the total amount of employees that this manager can support
 	int maxSize;
 	
@@ -31,7 +31,7 @@ public class Manager{
 			return new Employee(name);
 		}
 		else {
-			throw new Exception();
+			throw new Exception(this.name+"has exceeded the limit"+this.maxSize);
 		}
 	}
 }
